@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+      * {
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body {
+        background: #f5f6fa;
+      }
+
+      .wrapper .sidebar {
+        background: #015789;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 225px;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.5s ease;
+      }
+
+      .wrapper .sidebar .profile {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .wrapper .sidebar .profile img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+
+      .wrapper .sidebar .profile h3 {
+        color: #ffffff;
+        margin: 10px 0 5px;
+      }
+
+      .wrapper .sidebar .profile p {
+        color: rgb(206, 240, 253);
+        font-size: 14px;
+      }
+
+      .wrapper .sidebar ul li a {
+        display: block;
+        padding: 13px 30px;
+        border-bottom: 1px solid #10558d;
+        color: rgb(241, 237, 237);
+        font-size: 16px;
+        position: relative;
+      }
+
+      .wrapper .sidebar ul li a .icon {
+        color: #dee4ec;
+        width: 30px;
+        display: inline-block;
+      }
+
+      .wrapper .sidebar ul li a:hover,
+      .wrapper .sidebar ul li a.active {
+        color: #0c7db1;
+
+        background: white;
+        border-right: 2px solid rgb(5, 68, 104);
+      }
+
+      .wrapper .sidebar ul li a:hover .icon,
+      .wrapper .sidebar ul li a.active .icon {
+        color: #0c7db1;
+      }
+
+      .wrapper .sidebar ul li a:hover:before,
+      .wrapper .sidebar ul li a.active:before {
+        display: block;
+      }
+      .navigation .top_nav {
+        background-color: #0c6fb1;
+        margin-left: 225px;
+        display: block;
+        position: relative;
+        height: 100px;
+      }
+
+      .navigation .mid_nav {
+        background-color: #04aa6d;
+        margin-left: 225px;
+        height: auto;
+        position: relative;
+      }
+
+      .logo {
+        /* width: auto;
+    height: 120px; */
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: auto;
+      }
+
+      table {
+        /* flex: 1;*/
+        float: left;
+        border-collapse: collapse;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 3%;
+      }
+
+      .studentlist {
+        flex: 1;
+        padding-left: 20px;
+      }
+
+      th {
+        height: 70%;
+        padding: 15px;
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      td {
+        text-align: center;
+        padding: 15px;
+      }
+
+     
+
+      /*tr:hover{background-color: aquamarine;}*/
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      form {
+        flex: 1;
+        width: 100px;
+        /*margin-right: 70%;
+    /*float: left;
+    /*margin-bottom: 80%;*/
+      }
+
+      .new-student {
+        flex: 1;
+        margin-top: 40%;
+        margin-right: 200px;
+        margin-left: -100px;
+        /*padding-right: 100px;
+    /*background-color: #04aa6d;*/
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center;*/
+        justify-content: center;
+        flex-wrap: wrap;
+        /*margin: 0 -20px;;
+    /*align-content: space-around;*/
+      }
+
+      button {
+        background-color: #0ac681;
+        border-radius: 5px;
+        padding: 5px;
+        border: #0ac681;
+      }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Top menu -->
+      <div class="sidebar" style="overflow-x: auto">
+        <div class="profile">
+          <img
+            src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg"
+            alt="profile_picture"
+          />
+          <h3>Anamika Roy</h3>
+          <p>Designer</p>
+        </div>
+        <!--profile image & text-->
+        <!--menu item-->
+        <ul>
+          <li>
+            <a href="home" class="active">
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="student">
+              <span class="icon"><i class="fas fa-desktop"></i></span>
+              <span class="item">Students</span>
+            </a>
+          </li>
+          <li>
+            <a href="class">
+              <span class="icon"><i class="fas fa-user-friends"></i></span>
+              <span class="item">Classes</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports">
+              <span class="icon"><i class="fas fa-database"></i></span>
+              <span class="item">Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-chart-line"></i></span>
+              <span class="btn ">Logout</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-user-shield"></i></span>
+              <span class="item">Admin</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    -->
+    <div class="navigation">
+      <div class="top_nav">
+        <nav class="imagenav">
+          <img src="/images/104052-01.png" class="logo" alt="" />
+        </nav>
+      </div>
+      <div class="mid_nav">
+        <h1>Student list</h1>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="studentlist">
+        <table>
+          <tr>
+            <th >First Name </th>
+            <th>Last Name</th>
+           <th>ID</th>
+            <th>Edit</th> 
+            <th>Delete</th>
+          </tr>
+          
+          <% students112.forEach(students112 => { %>
+            <tr>
+            
+            <td><%= students112.firstname %> </td>
+            <td><%= students112.lastname %> </td>
+            <td><%= students112.student_id %> </td>
+            <td>  <button type="button" class="btn " style="background-color: #e3f2fd;"data-bs-toggle="modal" data-bs-target="#editModal">
+              Edit
+            </button></td>
+            <td>  <button type="button" class="btn btn-danger " style="background-color: #fdede3;"data-bs-toggle="modal" data-bs-target="#deleteModal">
+              Delete
+            </button></td>
+          </tr>
+           <% }) %>
+       
+        </table>
+      </div>
+
+      <div>
+        <form class="new-student" action="/student1" method="post">
+          <label for="fname">First Name</label><br />
+          <input type="text" id="fname" name="fname" /><br />
+          <label for="lname">Last Name</label><br />
+          <input type="text" id="lname" name="lname" /><br />
+          <label for="id">ID</label><br />
+          <input type="text" id="id" name="id" /><br />
+          <label for="Course">Course</label><br />
+          <input type="text" id="Course" name="Course" /><br />
+          <br />
+          <button type="submit">submit</button>
+        </form>
+      </div>
+    </div>
+
+     <!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/student3" method="post">
+          <label for="student_id">Student ID</label>  
+          <input type="text" id="student_id" name="student_id">
+          <br>
+          <label for="firstname">First Name</label>  
+          <input type="text" id="firstname" name="firstname">
+          <br>
+          <label for="lastname">Last Name </label>  
+          <input type="text" id="lastname" name="lastname">
+          <br>
+             <button type="submit" class="btn btn-primary"> Run</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Delete Student </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="student2" method="post">
+              <label for="studentid2">Student ID</label>  
+              <input type="text" id="studentid2" name="studentid2">
+              <br>
+                 <button type="submit" class="btn btn-danger"> Run</button>
+               
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>  
+
+  </body>
+</html>

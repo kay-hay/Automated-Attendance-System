@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: #04aa6d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.navigation .top_nav{
+    background-color: #0c6fb1;
+    margin-left: 225px;
+    display: block;
+    position: relative;
+    height: 100px;
+    
+    
+}
+
+.navigation .mid_nav{
+    background-color:#04aa6d;
+    margin-left: 225px;
+    height: auto;
+    position: relative;
+}
+
+
+.logo{
+   
+    /* width: auto;
+    height: 120px; */
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: auto;
+}
+
+table{
+   /* flex: 1;*/
+    float: left;
+    border-collapse: collapse;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.studentlist{
+    flex: 1;
+    padding-left: 20px;
+}
+
+th{
+    height: 70%;
+    padding: 15px;
+    background-color: #04aa6d;
+    color: white;
+}
+
+td{
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+/*tr:hover{background-color: aquamarine;}*/
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+form{
+    flex: 1;
+    width: 100px;
+    /*margin-right: 70%;
+    /*float: left;
+    /*margin-bottom: 80%;*/
+}
+
+.new-student{
+    flex: 1;
+    margin-top: 40%;
+    margin-right: 200px;
+    margin-left: -100px;
+    /*padding-right: 100px;
+    /*background-color: #04aa6d;*/
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+   /* align-items: center;*/
+    justify-content: center;
+    flex-wrap: wrap;
+    /*margin: 0 -20px;;
+    /*align-content: space-around;*/
+}
+
+button{
+    background-color: #0ac681;
+    border-radius: 5px;
+    padding: 5px;
+    border: #0ac681;
+}
+
+
+</style>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
